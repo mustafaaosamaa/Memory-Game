@@ -1,0 +1,87 @@
+body{
+    background-image: url('./images/brain.jpg');
+    background-size: auto;
+}
+.container {
+  background: rgba(221, 203, 183, 0.959);
+}
+
+.progress {
+    margin: 20px;
+    height: 30px;
+}
+
+.memory-card {
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.memory-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* Card container */
+.memory-card {
+  width: 100%;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* Inner flip container */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Flip effect */
+.memory-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back faces */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 107%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Back side */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.w-100 {
+    width: 80% !important;
+}
